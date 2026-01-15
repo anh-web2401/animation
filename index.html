@@ -27,18 +27,37 @@
 <body>
     <h1>ANIMATION LABS</h1>
 
-    <a href="02-Nguyễn Ngọc Ánh-Animation-Lab1/index.html">
-        Lab 1
-    </a>
+    <div id="labs"></div>
 
-    <a href="02-Nguyễn Ngọc Ánh-Animation-Lab2/index.html">
-        Lab 2
-    </a>
-    <a href="02-Nguyễn Ngọc Ánh-Animation-Lab3/index.html">
-        Lab 3
-    </a>
-    <a href="02-Nguyễn Ngọc Ánh-Animation-Lab4/index.html">
-        Lab 4
-    </a>
+    <script>
+        const username = "anh-web2401";
+        const repo = "animation";
+        const baseUrl = "https://anh-web2401.github.io/animation/";
+
+        fetch(`https://api.github.com/repos/${username}/${repo}/contents`)
+            .then(res => res.json())
+            .then(data => {
+                const container = document.getElementById("labs");
+                let labIndex = 1;
+
+                data
+                    .filter(item => item.type === "dir")
+                    .forEach(folder => {
+                        const a = document.createElement("a");
+                        a.href = `${baseUrl}${folder.name}/index.html`;
+
+                        // 👇 xử lý tên hiển thị
+                        if (/lab/i.test(folder.name)) {
+                            a.textContent = `Lab ${labIndex}`;
+                            labIndex++;
+                        } else {
+                            a.textContent = folder.name;
+                        }
+
+                        container.appendChild(a);
+                    });
+            })
+            .catch(err => console.error(err));
+    </script>
 </body>
 </html>
