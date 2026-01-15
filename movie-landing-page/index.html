@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Landing Page</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor"></div>
+
+<!-- Navigation -->
+<header>
+    <nav class="navbar">
+        <h1 class="logo">MOVIE</h1>
+        <ul class="menu">
+            <li><a href="#home" class="nav-link active">Trang chủ</a></li>
+            <li><a href="#movies" class="nav-link">Phim</a></li>
+            <li><a href="#about" class="nav-link">Giới thiệu</a></li>
+            <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+        </ul>
+        <button id="theme-toggle">☀️</button>
+    </nav>
+</header>
+
+<!-- Hero Banner -->
+<section id="home" class="hero">
+    <h2 class="hero-title">Thế Giới Điện Ảnh Đỉnh Cao</h2>
+
+    <!-- Marquee -->
+    <div class="marquee">
+        <span>Cập nhật những bộ phim mới nhất</span>
+    </div>
+
+    <button class="cta-btn">Xem Ngay</button>
+</section>
+
+<!-- Movies -->
+<section id="movies" class="movies">
+    <h2 class="section-title">Phim Nổi Bật</h2>
+
+    <div class="movie-list">
+        <div class="movie-card reveal">
+            <img src="assets/image/1-poster-truy-tim-long-dien-huong.webp" alt="">
+            <h3>Truy tìm Long Diên Hương</h3>
+        </div>
+
+        <div class="movie-card reveal">
+            <img src="assets/image/tu_chien.jpg" alt="">
+            <h3>Tử chiến trên không</h3>
+        </div>
+
+        <div class="movie-card reveal">
+            <img src="assets/image/images.jfif" alt="">
+            <h3>Mưa đỏ</h3>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="about reveal">
+    <h2 class="section-title">Giới thiệu</h2>
+    <p>MOVIE là nền tảng giới thiệu phim hiện đại, nơi cập nhật nhanh chóng các bộ phim
+        điện ảnh mới nhất từ Hollywood đến châu Á. Chúng tôi mang đến trailer chất lượng cao,
+        thông tin chi tiết và trải nghiệm hình ảnh sống động, giúp bạn không bỏ lỡ bất kỳ
+        tác phẩm điện ảnh đặc sắc nào.</p>
+</section>
+
+<section id="contact" class="contact reveal">
+    <h2 class="section-title">Liên Hệ</h2>
+
+    <div class="contact-wrapper">
+        <!-- Thông tin liên hệ -->
+        <div class="contact-info">
+            <p><strong>Email:</strong> movie@cinema.com</p>
+            <p><strong>Điện thoại:</strong> 0123 456 789</p>
+            <p><strong>Địa chỉ:</strong> 123 Nguyễn Ảnh Thủ, Quận 12, TP.HCM</p>
+        </div>
+
+        <!-- Form đăng ký -->
+        <form class="contact-form">
+            <h3>Đăng ký nhận thông tin phim</h3>
+            <input type="text" placeholder="Họ và tên" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Số điện thoại" required>
+            <button type="submit" class="cta-btn">Đăng Ký</button>
+        </form>
+    </div>
+</section>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
